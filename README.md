@@ -2,6 +2,9 @@
 https://development-gules.vercel.app/
 
 # How to run locally:
+cd into 'development'
+First run npm install
+Then,
 ### `npm start`
 
 Runs the app in the development mode.\
