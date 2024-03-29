@@ -29,6 +29,31 @@
   to { transform: rotate(360deg); }
 }
 
+.input-field {
+  background-color: #fceec5;
+  border-radius: 7px;
+}
+
+.filter-btn {
+  background-color: #f7e02d;
+  border-radius: 5px;
+  border-style: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 5px;
+  margin: 2px;
+}
+
+.filter-btn:hover {
+  background-color: #2d8bf7;
+  border-radius: 5px;
+  border-style: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 5px;
+  color: white;
+}
+
 .year {
   position: absolute;
   background-color: #11a5cf;

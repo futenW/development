@@ -51,17 +51,17 @@ function App() {
       return (
         <>
           <label htmlFor={id}>{props.direction} Year: </label>
-          <input id={id} value={input} onInput={e => setInput(e.target.value)}/>
-          <button onClick={(e) => {setData(prev_cart => [...prev_cart].filter(item => item[1] >= input))}}>Filter</button>
+          <input class="input-field" id={id} value={input} onInput={e => setInput(e.target.value)}/>
+          <button class="filter-btn" onClick={(e) => {setData(prev_cart => [...prev_cart].filter(item => item[1] >= input))}}>Filter</button>
         </>
       );
     } else {
       return (
-        <div class="vrtical-button">
+        <>
           <label htmlFor={id}>{props.direction} Year: </label>
-          <input id={id} value={input} onInput={e => setInput(e.target.value)}/>
-          <button onClick={(e) => {setData(prev_cart => [...prev_cart].filter(item => item[1] <= input))}}>Filter</button>
-        </div>
+          <input class="input-field" id={id} value={input} onInput={e => setInput(e.target.value)}/>
+          <button class="filter-btn" onClick={(e) => {setData(prev_cart => [...prev_cart].filter(item => item[1] <= input))}}>Filter</button>
+        </>
       );
     }
   }
