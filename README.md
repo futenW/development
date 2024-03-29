@@ -14,4 +14,4 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 # bugs:
-app does not work
+In usual cases, a photo cannot be added to favorites more than once and duplicated. However, application of the sort feature following a photo being added to favorites allows the photo to be added to favorites again.

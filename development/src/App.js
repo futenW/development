@@ -57,17 +57,17 @@ function App() {
       );
     } else {
       return (
-        <>
+        <div class="vrtical-button">
           <label htmlFor={id}>{props.direction} Year: </label>
           <input id={id} value={input} onInput={e => setInput(e.target.value)}/>
           <button onClick={(e) => {setData(prev_cart => [...prev_cart].filter(item => item[1] <= input))}}>Filter</button>
-        </>
+        </div>
       );
     }
   }
 
   const bakeryItemsJSX = data.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
-    <>{item[1]}<img onClick={(e) => {addToFavorites(item)}} src={item[0]} alt="white teddy bear" width="150" height="100"/></> // replace with BakeryItem component
+    <><span class="year">{item[1]}</span><img onClick={(e) => {addToFavorites(item)}} src={item[0]} alt="white teddy bear" width="150" height="100"/></> // replace with BakeryItem component
   ))
 
   const cartJSX = cart.length === 0 ? <p>No favorites yet</p>
@@ -75,22 +75,22 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Gallery</h1>
+      <h1 class="header">Gallery</h1>
 
       <DateFilter direction="Min"></DateFilter>
       <br></br>
       <DateFilter direction="Max"></DateFilter>
-      <div><button onClick={(e) => {sortByDate()}}>Sort Date</button></div>
+      <div class="vertical-button"><button onClick={(e) => {sortByDate()}}>Sort Date</button></div>
 
       {bakeryItemsJSX}
-      <div><button onClick={ () => {setData(image_data)} }>Reset</button></div>
+      <div class="vertical-button pretty-button"><button onClick={ () => {setData(image_data)} }>Reset</button></div>
 
       <hr></hr>
 
-      <h1>Favorites ({cart.length})</h1>
+      <h1 class="header">Favorites ({cart.length})</h1>
       {cartJSX}
 
-      <div><button onClick={ () => {setCart([])} }>Clear</button></div>
+      <div class="vertical-button"><button onClick={ () => {setCart([])} }>Clear</button></div>
     </div>
   );
 }
