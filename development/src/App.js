@@ -87,7 +87,7 @@ function App() {
 
       <hr></hr>
 
-      <h1>Favorites</h1>
+      <h1>Favorites ({cart.length})</h1>
       {cartJSX}
 
       <div><button onClick={ () => {setCart([])} }>Clear</button></div>
