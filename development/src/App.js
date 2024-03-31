@@ -75,22 +75,22 @@ function App() {
 
   return (
     <div className="App">
-      <h1 class="header">Gallery</h1>
+      <h1 class="header">Memories</h1>
 
       <DateFilter direction="Min"></DateFilter>
       <br></br>
       <DateFilter direction="Max"></DateFilter>
-      <div class="vertical-button"><button onClick={(e) => {sortByDate()}}>Sort Date</button></div>
+      <div class="vertical-button"><button class="filter-btn" onClick={(e) => {sortByDate()}}>Sort Date</button></div>
 
       {bakeryItemsJSX}
-      <div class="vertical-button pretty-button"><button onClick={ () => {setData(image_data)} }>Reset</button></div>
+      <div class="vertical-button pretty-button"><button class="filter-btn" onClick={ () => {setData(image_data)} }>Reset</button></div>
 
       <hr></hr>
 
       <h1 class="header">Favorites ({cart.length})</h1>
       {cartJSX}
 
-      <div class="vertical-button"><button onClick={ () => {setCart([])} }>Clear</button></div>
+      <div class="vertical-button"><button class="filter-btn" onClick={ () => {setCart([])} }>Clear</button></div>
     </div>
   );
 }
